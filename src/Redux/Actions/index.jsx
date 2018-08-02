@@ -1,7 +1,24 @@
-import {SET_ACTIVE_USER_ID} from './Constants/action-types';
+import {
+    SET_ACTIVE_USER_ID,
+    SET_TYPING_VALUE,
+    SEND_MESSAGE
+} from './Constants/action-types';
 
 export const setActiveUserId = id => ({
     type: SET_ACTIVE_USER_ID,
     payload: id
     //the action payload contains the user_id of the user contact.
 });
+
+export const setTypingValue = value => ({
+    type: SET_TYPING_VALUE,
+    payload: value
+})
+
+export const sendMessage = (message,userId) => ({
+    type: SEND_MESSAGE,
+    payload:{
+        message,
+        userId
+    }
+})
